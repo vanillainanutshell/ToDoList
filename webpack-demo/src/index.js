@@ -1,6 +1,6 @@
-import _ from 'lodash';
+import './style.css';
 
-let tasklist = [{
+let taskList = [{
 
         description: 'Task 1',
         completed: false,
@@ -22,26 +22,20 @@ let tasklist = [{
         index: 3,
     }
 ];
-
-const render = () => {
-    tasklist = tasklist.sort((a, b) => a.index - b.index);
-    console.log(tasklist);
+const generateTask = () => {
+    let taskUl = document.getElementById('taskUl');
+    for (let i = 0; i < taskList.length; i += 1) {
+        const li = document.createElement('li');
+        li.innerHTML = `
+        <div>       
+            <input type="checkbox" id="task" name="tasks">
+            <label for="tasks">${taskList[i].description}</label>
+        </div>
+        <div><i class="fas fa-ellipsis-v"></i></i></div>`;
+        taskUl.appendChild(li);
+    };
 };
 
 window.onload = () => {
-    render()
+    generateTask()
 };
-
-// for (let i = 0; i < taskList.length; i += 1) {
-//     taskUl.innerHTML = `
-//     <li>
-//     </li>
-// `;
-// }
-// class Task {
-//     constructor(description, index, status) {
-//       this.description = description;
-//       this.completed = status;
-//       this.index = index;
-//     }
-//   }
