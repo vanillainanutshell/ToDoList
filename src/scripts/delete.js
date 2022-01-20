@@ -4,9 +4,9 @@ import component from './htmldisplay.js';
 const taskDelete = () => {
     const clearButton = document.getElementById('clear');
     clearButton.addEventListener('click', () => {
-        const deleted = task.filter((x) => x.complete === false);
+        const result = task.filter((x) => x.complete === false);
         task.splice(0);
-        task.push(...deleted);
+        task.push(...result);
         localStorage.setItem('task', JSON.stringify(task));
         component();
     });
@@ -16,15 +16,13 @@ const deleteBin = () => {
     trashBin.forEach((e) => {
         e.addEventListener('click', () => {
             const index = e.parentNode.parentNode.id;
-            if (task[index].complete === true) {
-                e.parentNode.parentNode.remove();
-                task.splice(index, 1);
-                localStorage.setItem('task', JSON.stringify(tasks));
-                component();
-                window.location.reload();
-            };
+            e.parentNode.parentNode.remove();
+            task.splice(index, 1);
+            localStorage.setItem('task', JSON.stringify(task));
+            component();
+            window.location.reload();
         });
     });
 };
 
-export { deleteBin, taskDelete }
+export { deleteBin, taskDelete };
