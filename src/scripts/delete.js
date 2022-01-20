@@ -6,7 +6,7 @@ const taskDelete = () => {
     clearButton.addEventListener('click', () => {
         const deleted = task.filter((x) => x.complete === false);
         task.splice(0);
-        task.push(...result);
+        task.push(...deleted);
         localStorage.setItem('task', JSON.stringify(task));
         component();
     });
@@ -15,12 +15,16 @@ const deleteBin = () => {
     const trashBin = document.querySelectorAll('#trashbin');
     trashBin.forEach((e) => {
         e.addEventListener('click', () => {
-            const index = e.parentNode.parentNode.remove();
-            task.splice(index, 1);
-            localStorage.setItem('task', JSON.stringify(task));
-            component();
-            window.location.reload();
-
+            const index = e.parentNode.parentNode.id;
+            if (task[index].complete === true) {
+                e.parentNode.parentNode.remove();
+                task.splice(index, 1);
+                localStorage.setItem('task', JSON.stringify(tasks));
+                component();
+                window.location.reload();
+            };
         });
     });
 };
+
+export { deleteBin, taskDelete }
