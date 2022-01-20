@@ -1,5 +1,5 @@
-import task from './taskdescription.js';
-import component from './htmldisplay.js';
+import { task } from './taskdescription.js';
+import { component } from './htmldisplay.js';
 
 const taskDelete = () => {
     const clearButton = document.getElementById('clear');

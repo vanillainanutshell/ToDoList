@@ -1,4 +1,4 @@
-import task from './taskdescription.js';
+import { task } from './taskdescription.js';
 // import valueCheck from './completed.js';
 
 function component() {
@@ -27,6 +27,7 @@ function component() {
             taskContainer.appendChild(li);
         }
     }
+    localStorage.setItem('task', JSON.stringify(task));
     // valueCheck();
 }
 
