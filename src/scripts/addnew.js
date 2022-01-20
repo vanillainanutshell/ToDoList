@@ -1,6 +1,7 @@
-import { component } from './htmldisplay.js';
+/* eslint-disable  import/no-mutable-exports */
+import component from './htmldisplay.js';
 
-export const task = [];
+export let task = [];
 
 class ToDoList {
     constructor(index, description, complete = false) {

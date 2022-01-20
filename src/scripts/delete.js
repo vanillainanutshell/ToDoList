@@ -1,7 +1,7 @@
-import { task } from './taskdescription.js';
-import { component } from './htmldisplay.js';
+import { task } from './addnew.js';
+import component from './htmldisplay.js';
 
-const taskDelete = () => {
+export const taskDelete = () => {
     const clearButton = document.getElementById('clear');
     clearButton.addEventListener('click', () => {
         const result = task.filter((x) => x.complete === false);
@@ -11,7 +11,7 @@ const taskDelete = () => {
         component();
     });
 };
-const deleteBin = () => {
+export const deleteBin = () => {
     const trashBin = document.querySelectorAll('#trashbin');
     trashBin.forEach((e) => {
         e.addEventListener('click', () => {
@@ -25,4 +25,4 @@ const deleteBin = () => {
     });
 };
 
-export { deleteBin, taskDelete };
+// export { deleteBin, taskDelete };
