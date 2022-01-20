@@ -1,8 +1,5 @@
 import component from './htmldisplay.js'
 
-// const checkBox = document.querySelector('.task_check');
-// const check_label = document.getElementById('label');
-
 export let task = [];
 
 class ToDo {
