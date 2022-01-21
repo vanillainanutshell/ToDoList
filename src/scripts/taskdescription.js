@@ -11,6 +11,7 @@ const contentChange = () => {
         task[e.target.parentNode.parentNode.id].description = newDescription;
         localStorage.setItem('task', JSON.stringify(task));
         storageContainer();
+        window.location.reload();
       }
     });
   });

@@ -17,13 +17,16 @@ const inputTask = document.getElementById('add_input');
 export const input = () => {
   inputTask.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-      let index = task.length - 1;
-      index += 1;
-      const taskObject = new ToDoList(index, inputTask.value, false);
-      task.push(taskObject);
-      localStorage.setItem('task', JSON.stringify(task));
-      storageContainer();
-      inputTask.value = '';
+      if (inputTask.value !== '') {
+        let index = task.length - 1;
+        index += 1;
+        const taskObject = new ToDoList(index, inputTask.value, false);
+        task.push(taskObject);
+        localStorage.setItem('task', JSON.stringify(task));
+        storageContainer();
+        inputTask.value = '';
+        window.location.reload();
+      }
     }
   });
 };
