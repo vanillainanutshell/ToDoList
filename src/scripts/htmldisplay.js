@@ -2,7 +2,7 @@
 import { task } from './addnew.js';
 import valueCheck from './completed.js';
 
-function component() {
+function storageContainer() {
     const taskContainer = document.getElementById('taskUl');
     taskContainer.innerHTML = '';
     for (let i = 0; i < task.length; i += 1) {
@@ -11,7 +11,7 @@ function component() {
         if (task[i].complete !== false) {
             li.innerHTML = `<div>
             <input id="${task[i].index}" type="checkbox" class="task_check" name="task" checked>
-            <label  class="check_true for="task" id="label">${task[i].description}</label>
+            <input type="text" class="check_true for="task" id="label" value="${task[i].description}" ></input>
             </div>
             <div><i class="far trashBin fa-trash-alt" id="trashbin"></i><i class="fas fa-ellipsis-v" id="three_dots"></i></div>`;
             li.classList.add('task_li');
@@ -20,7 +20,7 @@ function component() {
         } else {
             li.innerHTML = `<div>
             <input id="${task[i].index}" type="checkbox" class="task_check" name="task">
-            <label class="check_true"  for="task" id="label">${task[i].description}</label>
+            <input type="text" class="check_true"  for="task" id="label" value="${task[i].description}"></input>
             </div>
             <div><i class="far trashBin fa-trash-alt" id="trashbin"></i><i class="fas fa-ellipsis-v" id="three_dots"></i></div>`;
             li.classList.add('task_li');
@@ -32,4 +32,4 @@ function component() {
     valueCheck();
 }
 
-export default component;
+export default storageContainer;

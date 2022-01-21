@@ -1,5 +1,5 @@
 import { task } from './addnew.js';
-import component from './htmldisplay.js';
+import storageContainer from './htmldisplay.js';
 
 export const taskDelete = () => {
     const clearButton = document.getElementById('clear');
@@ -8,7 +8,7 @@ export const taskDelete = () => {
         task.splice(0);
         task.push(...result);
         localStorage.setItem('task', JSON.stringify(task));
-        component();
+        storageContainer();
     });
 };
 export const deleteBin = () => {
@@ -19,7 +19,7 @@ export const deleteBin = () => {
             e.parentNode.parentNode.remove();
             task.splice(index, 1);
             localStorage.setItem('task', JSON.stringify(task));
-            component();
+            storageContainer();
             window.location.reload();
         });
     });

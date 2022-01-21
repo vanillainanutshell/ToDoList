@@ -1,5 +1,5 @@
 /* eslint-disable  import/no-mutable-exports */
-import component from './htmldisplay.js';
+import storageContainer from './htmldisplay.js';
 
 export let task = [];
 
@@ -21,7 +21,7 @@ export const input = () => {
             const taskObject = new ToDoList(index, inputTask.value, false);
             task.push(taskObject);
             localStorage.setItem('task', JSON.stringify(task));
-            component();
+            storageContainer();
             inputTask.value = '';
         }
     });
@@ -32,6 +32,6 @@ export const storage = () => {
         localStorage.setItem('task', JSON.stringify([]));
     } else {
         task = storagedTasks;
-        component();
+        storageContainer();
     }
 };
