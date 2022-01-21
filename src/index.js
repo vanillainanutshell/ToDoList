@@ -9,4 +9,3 @@ storage();
 valueCheck();
 contentChange();
 deleteBin();
-// taskDelete();
