@@ -1,7 +1,17 @@
 import { task } from './addnew.js';
 import storageContainer from './htmldisplay.js';
 
-const deleteBin = () => {
+export const taskDelete = () => {
+  const clearButton = document.getElementById('clear');
+  clearButton.addEventListener('click', () => {
+    const result = task.filter((x) => x.complete === false);
+    task.splice(0);
+    task.push(...result);
+    localStorage.setItem('task', JSON.stringify(task));
+    storageContainer();
+  });
+};
+export const deleteBin = () => {
   const trashBin = document.querySelectorAll('#trashbin');
   trashBin.forEach((e) => {
     e.addEventListener('click', () => {
@@ -15,4 +25,4 @@ const deleteBin = () => {
   });
 };
 
-export default deleteBin;
+// export { deleteBin, taskDelete };
