@@ -3,9 +3,73 @@
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: normal;
+    width: 80%;
+    background-color: rgb(245, 245, 245);
+}
+
+.todolist {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+}
+
+.taskUl {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid lightgray;
+}
+
+.task_li {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem;
+}
+
+.check_true {
+    border: none;
+    width: 80%;
+    height: 90%;
+    color: rgb(107, 109, 113);
+}
+
+.todolist {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 5px gray;
+}
+
+.todolist>h1 {
+    color: rgb(107, 109, 113);
+    font-weight: lighter;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.add_input {
+    color: rgb(151, 151, 151);
+    border: none;
+    width: auto;
+    margin-left: 0.5rem;
+    width: 90%;
+    text-align: center;
 }
 
 .trashBin:hover {
     cursor: pointer;
+}
+
+.clear {
+    border: none;
+    width: 100%;
+    height: 2rem;
+    color: rgb(107, 109, 113);
 }

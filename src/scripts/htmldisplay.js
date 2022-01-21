@@ -13,7 +13,7 @@ function storageContainer() {
             <input id="${task[i].index}" type="checkbox" class="task_check" name="task" checked>
             <input type="text" class="check_true for="task" id="label" value="${task[i].description}" ></input>
             </div>
-            <div><i class="far trashBin fa-trash-alt" id="trashbin"></i><i class="fas fa-ellipsis-v" id="three_dots"></i></div>`;
+            <div><i class="far trashBin fa-trash-alt" id="trashbin"></i>`;
             li.classList.add('task_li');
             li.setAttribute('id', `${task[i].index}`);
             taskContainer.appendChild(li);
@@ -22,7 +22,7 @@ function storageContainer() {
             <input id="${task[i].index}" type="checkbox" class="task_check" name="task">
             <input type="text" class="check_true"  for="task" id="label" value="${task[i].description}"></input>
             </div>
-            <div><i class="far trashBin fa-trash-alt" id="trashbin"></i><i class="fas fa-ellipsis-v" id="three_dots"></i></div>`;
+            <div><i class="far trashBin fa-trash-alt" id="trashbin"></i>`;
             li.classList.add('task_li');
             li.setAttribute('id', `${task[i].index}`);
             taskContainer.appendChild(li);
