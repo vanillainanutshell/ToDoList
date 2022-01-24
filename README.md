@@ -13,6 +13,9 @@ Second part of the Portfolio project
 - CSS
 - JavaScript
 
+### Live Demo Link
+https://vanillainanutshell.github.io/ToDoList/dist/
+
 ### Setup
 
 - Clone this repo URL "https://github.com/vanillainanutshell/ToDoList"
