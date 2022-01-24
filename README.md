@@ -14,8 +14,7 @@ Second part of the Portfolio project
 - JavaScript
 
 ### Live Demo Link
-[Click Here]
-(https://vanillainanutshell.github.io/ToDoList/dist/)
+[Click Here](https://vanillainanutshell.github.io/ToDoList/dist/)
 
 ### Setup
 
