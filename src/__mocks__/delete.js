@@ -20,7 +20,6 @@ export const deleteBin = () => {
             task.splice(index, 1);
             localStorage.setItem('task', JSON.stringify(task));
             storageContainer();
-            window.location.reload();
         });
     });
 };
