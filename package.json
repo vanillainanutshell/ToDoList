@@ -4,7 +4,7 @@
     "description": "",
     "private": "true",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
         "watch": "webpack --watch",
         "build": "webpack",
         "start": "webpack serve --open"
@@ -13,6 +13,7 @@
     "author": "vanillainanutshell",
     "license": "ISC",
     "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.16.8",
         "babel-eslint": "^10.1.0",
         "eslint": "^7.32.0",
         "eslint-config-airbnb-base": "^14.2.1",
@@ -20,6 +21,7 @@
         "exports-loader": "^3.1.0",
         "hint": "^6.1.9",
         "html-webpack-plugin": "^5.5.0",
+        "jest": "^27.4.7",
         "lodash": "^4.17.21",
         "stylelint": "^14.2.0",
         "stylelint-config-standard": "^24.0.0",
